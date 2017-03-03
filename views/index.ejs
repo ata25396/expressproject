@@ -1,0 +1,29 @@
+<% include partials/header>
+  <h1><%=title></h1>
+  <% if (errors){ %>
+    <ul>
+    <%=users.forEach(function(errors){ %>
+      <li><%= error.msg%></li>
+    <%})%>
+  </ul>
+  <%}%>
+  <h1>Sign up</h1>
+  <form method = "POST" action = "/users/add">
+    <label>First name</label><br>
+    <input type="text" name = fname>
+    <br>
+    <label>Last name</label><br>
+    <input type="text" name = lname>
+    <br>
+    <label>id</label><br>
+    <input type="text" name = id>
+    <br>
+    <label>username</label><br>
+    <input type="text" name = username>
+    <br>
+    <label>password</label><br>
+    <input type="text" name = password>
+    <br><br>
+    <input type="submit" name = submit>
+  </form>
+<% include partials/footer>
